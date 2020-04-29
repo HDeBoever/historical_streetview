@@ -6,6 +6,8 @@ from urllib.parse import urljoin
 import sys, os
 import time
 
+# Basic source found here: https://pythonprogramming.altervista.org/how-to-download-images-from-the-web-with-python/?doing_wp_cron=1588099753.4233078956604003906250
+
 # Function used to bring raw HTML into the python environment
 def make_soup(url):
 	req = urllib.request.Request(url, headers={'User-Agent' : "Magic Browser"})
@@ -47,7 +49,7 @@ def get_images(url):
 
 def main(argv):
 
-	# Scrape images from a given URL; save the images to the curr directory
+	# Scrape images from a given URL; save the images to the a relative path created by manipulating the URL name
 	# get_images('https://fr.wikipedia.org/wiki/Wikip%C3%A9dia:Accueil_principal')
 	# get_images('https://www.victoria.ca/EN/main/residents/archives/photo-gallery/140-years-of-victoria-city-hall.html')
 	get_images('http://archives.paris.fr/f/photos/mosaique/?&fnbres=40')
