@@ -14,10 +14,13 @@ et un esprit de curiosité envers le patrimoine historique humain dans le but de
 
     1.1 image_scraper.py
 
-    Ce fichier est la plaque fondatrice pour une évolution vers des applications qui s'en serviront
-    pour faire des recherches d'images sur un grand plan. Le code sera incorporé dans une classe python qui
-    sera invoquée par d'autres scriptes.
+    Ce fichier firgure parmis les premières démarches vers une évolution vers des applications qui s'en
+    serviront pour faire des recherches d'images sur un grand plan. Le code sera incorporé dans une classe python qui sera invoquée par d'autres scriptes.
 
     This file serves as the base file for eventual scraping work. The code will be wrapped in a class
     that will be invoked by more detailed tailored scraping scripts. Most likely, specific scripts will have
     to be used for each particular website.
+
+    1.2 kml_write.py
+
+    Pour intégrer les images sur une carte en coordonnées géographiques. 
