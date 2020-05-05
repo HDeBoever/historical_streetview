@@ -23,4 +23,9 @@ et un esprit de curiosité envers le patrimoine historique humain dans le but de
 
     1.2 kml_write.py
 
-    Pour intégrer les images sur une carte en coordonnées géographiques. 
+    Pour intégrer les images sur une carte en coordonnées géographiques.
+
+2.0 Dependencies/ dépendances
+
+    Je considere l'utilisation de nMimpore quel software qui pourra faire une bonne interface avec des
+    fichiers type .kml ou type .kmz, donc QGis, ArcGis, Google Earth, etc. 
