@@ -9,8 +9,14 @@ utilisateurs comment le paysage urbain et naturel aurait changé au fil des ann�
 multidisciplinaire qui demande une compréhension de la photographie, la géographie, le codage informatique,
 et un esprit de curiosité envers le patrimoine historique humain dans le but de le préserver.
 
-1.0 Project documentation:
+En ce moment, j'envisage une interface entre des photos à partir de reddit (spécifiquement le sub
+r/oldphotosinreallife) et des fichiers .kml. Les APIs de google seront utilisés pour fournir des
+informations pour chaque endroit dans chaque photographe.
 
+Use this bash script for now : https://github.com/ostrolucky/Simple-Subreddit-Image-Downloader
+Usage: ./download-subreddit-images.sh <subreddit_name>
+
+1.0 Project documentation:
 
     1.1 image_scraper.py
 
@@ -25,7 +31,15 @@ et un esprit de curiosité envers le patrimoine historique humain dans le but de
 
     Pour intégrer les images sur une carte en coordonnées géographiques.
 
+        1.2.0 get_coords(location)
+        Selon une addresse ou un endroit, cette fonction rend les coordonés géographiques de l'endroit
+        fourni. Cette fonction se sert de l'API google maps pour arriver à cette fonctionalité.
+
 2.0 Dependencies/ dépendances
 
     Je considere l'utilisation de nMimpore quel software qui pourra faire une bonne interface avec des
-    fichiers type .kml ou type .kmz, donc QGis, ArcGis, Google Earth, etc. 
+    fichiers type .kml ou type .kmz, donc QGis, ArcGis, Google Earth, etc.
+
+    Donc, à partir de maintenant, les API de Google seront utilisés pour créer des couches géographiques
+    compatibles avec google maps. En ce moment, nous nous servons du API Google Places. La clé de cet API
+    est sauvegardée localement pour le moment.
