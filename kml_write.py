@@ -40,21 +40,29 @@ def get_coords(location):
 	#test - print results
 	print(lat,lon)
 
-def write_to_kml():
+	# Return a tuple
+	return (lat, lon)
 
-	# simplekml takes coords in long/lat format
+def write_to_kml(location):
+
+	# simplekml takes coords in latitude, then longitude format
 	path = os.getcwd()
 
 	if not os.path.exists('test_kml_files'):
 		os.mkdir('test_kml_files')
 
-	print(path)
+	# print(path)
 
 	relative_path = path + "/test_kml_files"
 	kml = simplekml.Kml()
-	file = ('test_kml.txt')
+	# modify the filename to make it easier to navigate in a linux system
+	filename = location.lower().replace(' ', '_')
+	file = (filename + '.kml')
 	f = open(file, "w")
-	point = kml.newpoint(name = ("test point"), coords = [(0, 0, 0)])
+
+	latitude, longitude = get_coords(location)
+
+	point = kml.newpoint(name = (location), coords = [(longitude, latitude, 0)])
 	kml.save(relative_path + '/' + file)
 
 
@@ -63,7 +71,14 @@ def main(argv):
 	# Main is used for testing purposes
 	# test_google_api()
 
-	get_coords('Paris, France')
+	# get_coords('France')
+	# get_coords('Tour Eiffel')
+
+	# This call uses a Google Maps API call to associate geographic coordinates to the provided location
+	# steps have to be taken to now associate an image with the .kml file
+	# write_to_kml('Tour Eiffel')
+	write_to_kml('Reichstag')
+	write_to_kml('1324 Blanshard street, Victoria BC')
 
 
 
