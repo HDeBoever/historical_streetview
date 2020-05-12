@@ -43,7 +43,7 @@ def get_coords(location):
 	# Return a tuple
 	return (lat, lon)
 
-def write_to_kml(location):
+def write_to_kml(location, picture):
 
 	# simplekml takes coords in latitude, then longitude format
 	path = os.getcwd()
@@ -63,7 +63,9 @@ def write_to_kml(location):
 	latitude, longitude = get_coords(location)
 
 	point = kml.newpoint(name = (location), coords = [(longitude, latitude, 0)])
-	kml.save(relative_path + '/' + file)
+	picture_path = kml.addfile(path + '/oldphotosinreallife/' + picture)
+	point.description = ('<img src="' + picture_path + '" alt="picture" width="500" height="400" align="left" />')
+	kml.savekmz(relative_path + '/' + file)
 
 
 def main(argv):
@@ -76,9 +78,18 @@ def main(argv):
 
 	# This call uses a Google Maps API call to associate geographic coordinates to the provided location
 	# steps have to be taken to now associate an image with the .kml file
-	# write_to_kml('Tour Eiffel')
-	write_to_kml('Reichstag')
-	write_to_kml('1324 Blanshard street, Victoria BC')
+
+	#### Paris
+	write_to_kml('Tour Eiffel', 'tour_eiffel.jpg')
+	write_to_kml('Opéra Garnier, Paris', 'opéra_garnier.jpg')
+	write_to_kml('Avenue de l\'Opéra, Paris', 'avenue_de_l\'opéra.jpg')
+	write_to_kml('132 rue d\'Alésia, Paris', '132_alésia.jpg')
+
+	### Berlin
+	write_to_kml('Reichstag', 'reichstag.jpg')
+
+	### Victoria BC
+	write_to_kml('1324 Blanshard street, Victoria BC', '1324_blanshard.jpg')
 
 
 
