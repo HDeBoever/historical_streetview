@@ -42,7 +42,7 @@ Usage: ./download-subreddit-images.sh <subreddit_name>
 
     Donc, à partir de maintenant, les API de Google seront utilisés pour créer des couches géographiques
     compatibles avec google maps et des outils géographiques. En ce moment, nous utilisons le API Google Places. La clé de cet API
-    est sauvegardée localement pour le moment de façon à ne pas mettre la sécurité de mon compte Google en question.
+    est sauvegardée localement pour le moment de façon à ne pas compromettre la sécurité de mon compte Google en question.
 
 
 3.0 Dossier test_kml_files
