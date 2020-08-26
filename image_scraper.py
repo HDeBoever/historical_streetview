@@ -14,6 +14,7 @@ def make_soup(url):
 	html = urllib.request.urlopen(req)
 	return BeautifulSoup(html, 'html.parser')
 
+# Download the images from a given website
 def get_images(url):
 
 	# Create a directory to store the incoming images into

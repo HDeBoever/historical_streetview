@@ -42,6 +42,8 @@ def get_coords(location):
 	# Return a tuple
 	return (lat, lon)
 
+# The location arg given to the get_coords function which uses the GeoCode API
+# to return the geographic coordinates of the given search term. 
 def write_to_kml(location, picture):
 
 	# simplekml takes coords in latitude, then longitude format

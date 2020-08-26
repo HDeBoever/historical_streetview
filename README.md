@@ -1,6 +1,6 @@
 0.0
 
-Overall project goal: To provide access to images in archives with their date of capture, and their geographic location. A later adaptation of the project would include incorporating this data in a mapping layer in the interest of tracking how locations change throughout history.
+Overall project goal: To provide access to images in archives with their date of capture, and their geographic location. A later adaptation of the project would include incorporating this data in a mapping layer in the interest of tracking how locations change throughout history. Also a testbed for me to play with Google Geographic APIs
 
 Le but principal de ce projet de recherche serait de créer une base de donnés d'images historiques pour
 finalement associer les dates et la geolocalisation avec chaque image. Cela dans le but de fournir des
@@ -37,9 +37,20 @@ Usage: ./download-subreddit-images.sh <subreddit_name>
 
 2.0 Dependencies/ dépendances
 
-    Je considere l'utilisation de nMimpore quel software qui pourra faire une bonne interface avec des
+    Je considère l'utilisation de n'importe quel logiciel qui pourra faire une interface convenable avec des
     fichiers type .kml ou type .kmz, donc QGis, ArcGis, Google Earth, etc.
 
     Donc, à partir de maintenant, les API de Google seront utilisés pour créer des couches géographiques
-    compatibles avec google maps. En ce moment, nous nous servons du API Google Places. La clé de cet API
-    est sauvegardée localement pour le moment.
+    compatibles avec google maps et des outils géographiques. En ce moment, nous utilisons le API Google Places. La clé de cet API
+    est sauvegardée localement pour le moment de façon à ne pas mettre la sécurité de mon compte Google en question.
+
+
+3.0 Dossier test_kml_files
+
+    Ce dossier contient des fichiers téléchargeables que vous pouvez essayer sur Google Earth.
+
+    This folder contains readily downloadable files that you can try in Google Earth. The generation of these files will depend on the computer also having the images downloaded on the local machine in order to be integrated.
+
+4.0 Utilisation du programme / Program Usage
+
+    image_scraper.py  --- > kml_write.py
