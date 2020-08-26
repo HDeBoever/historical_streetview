@@ -1,9 +1,9 @@
 0.0
 
-Overall project goal: To provide access to images in archives with their date of capture, and thier geographic location. A later adaptation of the project would include incorporating this data in a mapping layer in the interest of tracking how locations change throughout history.
+Overall project goal: To provide access to images in archives with their date of capture, and their geographic location. A later adaptation of the project would include incorporating this data in a mapping layer in the interest of tracking how locations change throughout history.
 
 Le but principal de ce projet de recherche serait de créer une base de donnés d'images historiques pour
-finalement associer les dates et la geolocalisation avec chaque image. Cela dans le bût de fournir des
+finalement associer les dates et la geolocalisation avec chaque image. Cela dans le but de fournir des
 données pour un projet avec un système cartographique (e.g. un plugin google maps) pour montrer aux
 utilisateurs comment le paysage urbain et naturel aurait changé au fil des années. Ceçi est un projet
 multidisciplinaire qui demande une compréhension de la photographie, la géographie, le codage informatique,

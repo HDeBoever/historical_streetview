@@ -3,7 +3,6 @@ import googlemaps
 from datetime import datetime
 from googleplaces import GooglePlaces, types, lang
 
-
 # function to test the access to a google API and the place attributes
 def test_google_api():
 

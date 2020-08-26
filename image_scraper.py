@@ -52,7 +52,7 @@ def main(argv):
 	# Scrape images from a given URL; save the images to the a relative path created by manipulating the URL name
 	# get_images('https://fr.wikipedia.org/wiki/Wikip%C3%A9dia:Accueil_principal')
 	# get_images('https://www.victoria.ca/EN/main/residents/archives/photo-gallery/140-years-of-victoria-city-hall.html')
-	get_images('http://archives.paris.fr/f/photos/mosaique/?&fnbres=40')
+	get_images('https://www.reddit.com/r/OldPhotosInRealLife/')
 
 if __name__ == '__main__':
 	main(sys.argv)
