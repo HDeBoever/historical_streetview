@@ -1,5 +1,6 @@
 import simplekml, os, sys
 import googlemaps
+import wikipedia
 from datetime import datetime
 from googleplaces import GooglePlaces, types, lang
 
@@ -43,7 +44,7 @@ def get_coords(location):
 	return (lat, lon)
 
 # The location arg given to the get_coords function which uses the GeoCode API
-# to return the geographic coordinates of the given search term. 
+# to return the geographic coordinates of the given search term.
 def write_to_kml(location, picture):
 
 	# simplekml takes coords in latitude, then longitude format
@@ -81,16 +82,20 @@ def main(argv):
 	# steps have to be taken to now associate an image with the .kml file
 
 	#### Paris
-	write_to_kml('Tour Eiffel', 'tour_eiffel.jpg')
-	write_to_kml('Opéra Garnier, Paris', 'opéra_garnier.jpg')
-	write_to_kml('Avenue de l\'Opéra, Paris', 'avenue_de_l\'opéra.jpg')
-	write_to_kml('132 rue d\'Alésia, Paris', '132_alésia.jpg')
+	# write_to_kml('Tour Eiffel', 'tour_eiffel.jpg')
+	# write_to_kml('Opéra Garnier, Paris', 'opéra_garnier.jpg')
+	# write_to_kml('Avenue de l\'Opéra, Paris', 'avenue_de_l\'opéra.jpg')
+	# write_to_kml('132 rue d\'Alésia, Paris', '132_alésia.jpg')
 
 	### Berlin
-	write_to_kml('Reichstag', 'reichstag.jpg')
+	# write_to_kml('Reichstag', 'reichstag.jpg')
 
 	### Victoria BC
-	write_to_kml('1324 Blanshard street, Victoria BC', '1324_blanshard.jpg')
+	# write_to_kml('1324 Blanshard street, Victoria BC', '1324_blanshard.jpg')
+
+
+	# testing wikipedia
+	print(wikipedia.summary("Berlin"))
 
 
 
