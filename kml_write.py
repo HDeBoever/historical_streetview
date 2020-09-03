@@ -55,6 +55,9 @@ def write_to_kml(location, picture):
 
 	# print(path)
 
+	#Add the wikipedia description to the location
+	description = wikipedia.summary(location)
+
 	relative_path = path + "/test_kml_files"
 	kml = simplekml.Kml()
 	# modify the filename to make it easier to navigate in a linux system
@@ -66,7 +69,7 @@ def write_to_kml(location, picture):
 
 	point = kml.newpoint(name = (location), coords = [(longitude, latitude, 0)])
 	picture_path = kml.addfile(path + '/oldphotosinreallife/' + picture)
-	point.description = ('<img src="' + picture_path + '" alt="picture" width="500" height="400" align="left" />')
+	point.description = ('<img src="' + picture_path + '" alt="' + description + '" width="500" height="400" align="left" />')
 	kml.savekmz(relative_path + '/' + file)
 
 
