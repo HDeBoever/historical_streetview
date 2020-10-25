@@ -20,7 +20,7 @@ Usage: ./download-subreddit-images.sh <subreddit_name>
 
     1.1 image_scraper.py
 
-    Ce fichier firgure parmis les premières démarches vers une évolution vers des applications qui s'en
+    Ce fichier figure parmis les premières démarches vers une évolution  des applications qui s'en
     serviront pour faire des recherches d'images sur un grand plan. Le code sera incorporé dans une classe python qui sera invoquée par d'autres scriptes.
 
     This file serves as the base file for eventual scraping work. The code will be wrapped in a class
