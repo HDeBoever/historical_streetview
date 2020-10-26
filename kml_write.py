@@ -67,10 +67,12 @@ def write_to_kml(location, picture):
 
 	latitude, longitude = get_coords(location)
 
+	print(latitude, longitude)
+
 	point = kml.newpoint(name = (location), coords = [(longitude, latitude, 0)])
 	picture_path = kml.addfile(path + '/oldphotosinreallife/' + picture)
 	point.description = ('<img src="' + picture_path + '" alt="' + description + '" width="500" height="400" align="left" />')
-	print(point.description)
+	print(relative_path + '/' + file)
 	kml.savekmz(relative_path + '/' + file)
 
 def iterate_images_in_folder(dir):
@@ -79,7 +81,7 @@ def iterate_images_in_folder(dir):
 	for root, dirs, files in os.walk(dir):
 		for file in files:
 			if file.endswith(EXTENSIONS):
-				#file which ends with extension type so do your thing!
+				#
 				print(file)
 
 
@@ -95,7 +97,7 @@ def main(argv):
 	# steps have to be taken to now associate an image with the .kml file
 
 	#### Paris
-	# write_to_kml('Tour Eiffel', 'tour_eiffel.jpg')
+	write_to_kml('Tour Eiffel', 'tour_eiffel.jpg')
 	# write_to_kml('Opéra Garnier, Paris', 'opéra_garnier.jpg')
 	# write_to_kml('Avenue de l\'Opéra, Paris', 'avenue_de_l\'opéra.jpg')
 	# write_to_kml('132 rue d\'Alésia, Paris', '132_alésia.jpg')
@@ -111,7 +113,7 @@ def main(argv):
 	# print(wikipedia.summary("Tour Eiffel"))
 
 	# testing iterate_images_in_folder
-	iterate_images_in_folder("oldphotosinreallife")
+	# iterate_images_in_folder("oldphotosinreallife")
 
 
 

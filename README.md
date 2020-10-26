@@ -53,8 +53,11 @@ Usage: ./download-subreddit-images.sh <subreddit_name>
 
 4.0 Utilisation du programme / Program Usage
 
-    image_scraper.py  --- > kml_write.py
+    image_scraper.py  --- > kml_write.py --- > ensuite importer les fichier .kml dans google earth.
 
 5.0 Future improvements
 
     Incorporer fonctionalité Wikipédia pour obtenir les descriptions.
+
+    Incorporer les fonctionalités des outils dans un site web django pour stocker les interactions géographiques et les
+    fichiers .kml
