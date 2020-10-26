@@ -76,7 +76,7 @@ def write_to_kml(location, picture):
 def iterate_images_in_folder(dir):
 
 	EXTENSIONS = ('.svg','.jpg')
-	for root, dirs, files in os.walk(image_dir):
+	for root, dirs, files in os.walk(dir):
 		for file in files:
 			if file.endswith(EXTENSIONS):
 				#file which ends with extension type so do your thing!
